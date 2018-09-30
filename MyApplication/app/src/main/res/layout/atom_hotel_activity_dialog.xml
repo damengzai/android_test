@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/atom_hotel_container_ll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00000000"
+    android:gravity="center"
+    android:paddingTop="30dp"
+    android:layout_gravity="center"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/atom_hotel_content_sdv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:src="@drawable/atom_hotel_activity_content"/>
+    <!--<com.mqunar.atom.hotel.view.FontTextView-->
+        <!--android:id="@+id/atom_hotel_close_ftv"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="@string/atom_hotel_icon_close"-->
+        <!--android:layout_marginTop="30dp"-->
+        <!--/>-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="123"/>
+</LinearLayout>
