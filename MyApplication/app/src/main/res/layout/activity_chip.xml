@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.SearchView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></android.support.v7.widget.SearchView>
+
+    <SearchView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></SearchView>
+
+    <android.support.design.chip.ChipGroup
+        android:id="@+id/cg_hot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:chipSpacingHorizontal="10dp"
+        app:chipSpacingVertical="12dp"
+        android:layout_gravity="center_horizontal"
+        ></android.support.design.chip.ChipGroup>
+    <android.support.design.chip.Chip
+        android:id="@+id/cp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BigChip"
+        app:chipIcon="@mipmap/ic_launcher"
+        app:closeIcon="@mipmap/ic_launcher"
+        app:closeIconEnabled="true"
+        app:closeIconTint="#990000"
+        />
+</LinearLayout>

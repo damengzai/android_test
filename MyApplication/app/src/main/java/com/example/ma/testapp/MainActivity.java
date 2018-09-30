@@ -27,6 +27,7 @@ import android.widget.TextView;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
+import com.example.ma.testapp.chipview.ChipViewActivity;
 
 import java.util.List;
 
@@ -41,7 +42,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
     private Context mContext;
     private FontTextView order,fav;
     private FrameLayout container;
-    private Button toNestedScrollView, showActivityDialog, navigationView;
+    private Button toNestedScrollView, showActivityDialog, navigationView, chipView;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -61,6 +62,8 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
         toNestedScrollView.setOnClickListener(this);
         navigationView = (Button) findViewById(R.id.btn_to_nav_view);
         navigationView.setOnClickListener(this);
+        chipView = findViewById(R.id.btn_to_chip);
+        chipView.setOnClickListener(this);
 
         container.addView(new BoardTextView(this));
 //        tvTest.setTextColor(-43691);
@@ -148,6 +151,9 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
                 break;
             case R.id.btn_to_nav_view:
                 startActivity(new Intent(MainActivity.this, NavigationViewActivity.class));
+                break;
+            case R.id.btn_to_chip:
+                startActivity(new Intent(MainActivity.this, ChipViewActivity.class));
                 break;
         }
     }

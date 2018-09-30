@@ -19,6 +19,7 @@
 
         </activity>
         <activity android:name=".NavigationViewActivity"></activity>
+        <activity android:name=".chipview.ChipViewActivity"></activity>
 
     </application>
 

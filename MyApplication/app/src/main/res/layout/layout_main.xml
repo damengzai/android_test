@@ -65,6 +65,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="NavigationView"/>
+    <Button
+        android:id="@+id/btn_to_chip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Chip"/>
 
 
 </LinearLayout>
