@@ -28,6 +28,7 @@ import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.example.ma.testapp.chipview.ChipViewActivity;
+import com.example.ma.testapp.glide.GlideActivity;
 
 import java.util.List;
 
@@ -42,7 +43,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
     private Context mContext;
     private FontTextView order,fav;
     private FrameLayout container;
-    private Button toNestedScrollView, showActivityDialog, navigationView, chipView;
+    private Button toNestedScrollView, showActivityDialog, navigationView, chipView, glide,stick_top_view;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -64,6 +65,10 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
         navigationView.setOnClickListener(this);
         chipView = findViewById(R.id.btn_to_chip);
         chipView.setOnClickListener(this);
+        glide = findViewById(R.id.btn_to_glide);
+        glide.setOnClickListener(this);
+        stick_top_view = findViewById(R.id.stick_top_view);
+        stick_top_view.setOnClickListener(this);
 
         container.addView(new BoardTextView(this));
 //        tvTest.setTextColor(-43691);
@@ -154,6 +159,12 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
                 break;
             case R.id.btn_to_chip:
                 startActivity(new Intent(MainActivity.this, ChipViewActivity.class));
+                break;
+            case R.id.btn_to_glide:
+                startActivity(new Intent(MainActivity.this, GlideActivity.class));
+                break;
+            case R.id.stick_top_view:
+                startActivity(new Intent(MainActivity.this, StickTopViewActivity.class));
                 break;
         }
     }

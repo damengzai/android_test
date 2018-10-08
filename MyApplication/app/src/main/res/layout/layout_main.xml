@@ -3,10 +3,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
+
     <FrameLayout
         android:id="@+id/container"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content" />
+
     <Button
         android:id="@+id/btn_show_dialog"
         android:layout_width="wrap_content"
@@ -36,9 +38,9 @@
             android:id="@+id/order"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_gravity="center"
             android:layout_weight="1"
             android:gravity="center"
-            android:layout_gravity="center"
             android:text="" />
 
         <com.example.ma.testapp.FontTextView
@@ -48,28 +50,41 @@
             android:layout_weight="1"
             android:text="" />
     </LinearLayout>
+
     <Button
         android:id="@+id/show_activity_dialog"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="显示活动dialog"
-        />
+        android:text="显示活动dialog" />
 
     <Button
         android:id="@+id/btn_to_nested_scroll_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="NestedScrollView"/>
+        android:text="NestedScrollView" />
+
     <Button
         android:id="@+id/btn_to_nav_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="NavigationView"/>
+        android:text="NavigationView" />
+
     <Button
         android:id="@+id/btn_to_chip"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Chip"/>
+        android:text="Chip" />
+
+    <Button
+        android:id="@+id/btn_to_glide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Glide" />
+    <Button
+        android:id="@+id/stick_top_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="stick_top_view"/>
 
 
 </LinearLayout>
