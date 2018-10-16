@@ -26,6 +26,8 @@
         <activity android:name=".chipview.ChipViewActivity"></activity>
         <activity android:name=".glide.GlideActivity"></activity>
         <activity android:name=".StickTopViewActivity"></activity>
+        <activity android:name=".WebViewAcitivity"/>
+        <activity android:name=".ButterKnifeActivity"></activity>
     </application>
 
 </manifest>

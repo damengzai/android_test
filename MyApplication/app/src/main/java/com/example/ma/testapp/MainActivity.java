@@ -43,7 +43,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
     private Context mContext;
     private FontTextView order,fav;
     private FrameLayout container;
-    private Button toNestedScrollView, showActivityDialog, navigationView, chipView, glide,stick_top_view;
+    private Button toNestedScrollView, showActivityDialog, navigationView, chipView, glide,stick_top_view,webView,butterKnife;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -69,6 +69,11 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
         glide.setOnClickListener(this);
         stick_top_view = findViewById(R.id.stick_top_view);
         stick_top_view.setOnClickListener(this);
+        butterKnife = findViewById(R.id.btn_to_butterKnife);
+        butterKnife.setOnClickListener(this);
+
+        webView = findViewById(R.id.btn_to_wv);
+        webView.setOnClickListener(this);
 
         container.addView(new BoardTextView(this));
 //        tvTest.setTextColor(-43691);
@@ -165,6 +170,12 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
                 break;
             case R.id.stick_top_view:
                 startActivity(new Intent(MainActivity.this, StickTopViewActivity.class));
+                break;
+            case R.id.btn_to_wv:
+                startActivity(new Intent(MainActivity.this, WebViewAcitivity.class));
+                break;
+            case R.id.btn_to_butterKnife:
+                startActivity(new Intent(MainActivity.this, ButterKnifeActivity.class));
                 break;
         }
     }
