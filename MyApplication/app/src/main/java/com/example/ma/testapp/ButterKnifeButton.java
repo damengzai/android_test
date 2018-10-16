@@ -15,6 +15,12 @@ import butterknife.OnClick;
  */
 
 public class ButterKnifeButton extends Button {
+    @OnClick
+    public void onClick(){
+        Toast.makeText(getContext(), "BKB", Toast.LENGTH_LONG).show();
+        Log.d("------", "onClick: -------ButterKnifeButton");
+    }
+
     public ButterKnifeButton(Context context) {
         super(context);
     }
@@ -27,9 +33,5 @@ public class ButterKnifeButton extends Button {
         super(context, attrs, defStyleAttr);
     }
 
-    @OnClick
-    public void onClick(){
-        Toast.makeText(getContext(), "BKB", Toast.LENGTH_LONG).show();
-        Log.d("------", "onClick: -------ButterKnifeButton");
-    }
+
 }
