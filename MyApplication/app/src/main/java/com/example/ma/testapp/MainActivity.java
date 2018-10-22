@@ -32,6 +32,10 @@ import com.example.ma.testapp.glide.GlideActivity;
 
 import java.util.List;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+
 /**
  * Created by shumengma on 2018/6/21.
  */
@@ -44,6 +48,8 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
     private FontTextView order,fav;
     private FrameLayout container;
     private Button toNestedScrollView, showActivityDialog, navigationView, chipView, glide,stick_top_view,webView,butterKnife;
+    @BindView(R.id.btn_to_okhttp)
+    Button toOkHttp;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -71,9 +77,11 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
         stick_top_view.setOnClickListener(this);
         butterKnife = findViewById(R.id.btn_to_butterKnife);
         butterKnife.setOnClickListener(this);
-
         webView = findViewById(R.id.btn_to_wv);
         webView.setOnClickListener(this);
+
+        ButterKnife.bind(this);
+
 
         container.addView(new BoardTextView(this));
 //        tvTest.setTextColor(-43691);
@@ -180,6 +188,15 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
         }
     }
 
+    @OnClick(R.id.btn_to_okhttp)
+    void gotoOkHttp(){
+        startActivity(new Intent(MainActivity.this, OkHttpActivity.class));
+    }
+
+    @OnClick(R.id.btn_to_gson)
+    void gotoGSON(){
+        startActivity(new Intent(MainActivity.this, GSONActivity.class));
+    }
 
     /**
      * 使TextView中不同大小字体垂直居中
