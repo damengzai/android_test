@@ -104,6 +104,7 @@ public class OkHttpActivity extends AppCompatActivity {
         @Override
         public Response intercept(Chain chain) throws IOException {
             Request request = chain.request();
+//            FormBody f = (FormBody)request.body();
             long t1 = System.nanoTime();
             Log.d("------", "intercept: Sending request "+ request.url() + " on " + chain.connection() + "\n "+ request.headers());
 

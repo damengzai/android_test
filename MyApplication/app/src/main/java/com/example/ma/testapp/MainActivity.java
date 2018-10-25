@@ -197,6 +197,10 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
     void gotoGSON(){
         startActivity(new Intent(MainActivity.this, GSONActivity.class));
     }
+    @OnClick(R.id.btn_to_eventbus)
+    void gotoEventBus(){
+        startActivity(new Intent(MainActivity.this, EventBusActivity.class));
+    }
 
     /**
      * 使TextView中不同大小字体垂直居中

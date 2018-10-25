@@ -39,5 +39,7 @@ dependencies {
     annotationProcessor 'com.jakewharton:butterknife-compiler:9.0.0-rc1'
     //gson
     compile 'com.google.code.gson:gson:2.8.5'
+    //EventBus
+    compile 'org.greenrobot:eventbus:3.1.1'
 }
 

@@ -30,6 +30,7 @@
         <activity android:name=".ButterKnifeActivity"></activity>
         <activity android:name=".OkHttpActivity"></activity>
         <activity android:name=".GSONActivity"></activity>
+        <activity android:name=".EventBusActivity"></activity>
     </application>
 
 </manifest>
