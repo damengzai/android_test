@@ -50,7 +50,7 @@ public class WebViewAcitivity extends AppCompatActivity {
 //        webView.getSettings().setDefaultZoom(WebSettings.ZoomDensity.MEDIUM);
         webView.getSettings().setDisplayZoomControls(true);
         WebView.setWebContentsDebuggingEnabled(true);
-        setAcceptThirdPartyCookies();
+//        setAcceptThirdPartyCookies();
 
         String ctripHotelDetailUrl = "https://m.ctrip.com/webapp/hotel/hoteldetail/428365.html?atime=20180930&daylater=0&days=1&contrl=0&pay=0&discount=&latlon=&listindex=1&userLocationSearch=false#fromList";
 //        String ctripUrl = "https://m.ctrip.com/webapp/hotel/?atime=20180930&days=1&city=2";
@@ -59,7 +59,7 @@ public class WebViewAcitivity extends AppCompatActivity {
         String elongUrl = "http://m.elong.com/hotel/40101029/#indate=2018-09-29&outdate=2018-09-30";
         String feizhu = "https://h5.m.taobao.com/trip/hotel/detail/detail.html?checkIn=2018-10-23&checkOut=2018-10-24&shid=51745100&_projVer=1.1.11&isInternational=0&ttid=201300%40travel_h5_3.1.0";
         String meituan = "https://i.meituan.com/awp/h5/hotel/poi/deal.html?poiId=5241372&startTime=1539907200000&endTime=1539993600000&ct_poi=200388587257877468035240585851965810531_c0_e2506917188224341080_anull_o1_dhotelpoitagb_k1002&type=1&zlFlag=true";
-
+        String ctripLogin = "https://accounts.ctrip.com/H5Login/Index?from=https%3A%2F%2Fm.ctrip.com%2Fwebapp%2Fmyctrip%2Findex&backurl=https%3A%2F%2Fm.ctrip.com%2Fwebapp%2Fmyctrip%2Findex";
         // set cookie
         CookieSyncManager.createInstance(this);
         CookieManager cookieManager = CookieManager.getInstance();

@@ -3,4 +3,6 @@
     <string name="test">&#xe415; 浏览&amp;收藏</string>
     <string name="fav">&#xe415; 浏览&amp;收藏</string>
     <string name="order">&#xf459; 我的订单</string>
+    <string name="languages">Languages: %s</string>
+    <string name="watcher">Watcher: %s</string>
 </resources>

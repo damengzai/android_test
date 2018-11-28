@@ -22,6 +22,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.SeekBar;
 import android.widget.TextView;
 
 import com.alibaba.fastjson.JSON;
@@ -29,6 +30,7 @@ import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.example.ma.testapp.chipview.ChipViewActivity;
 import com.example.ma.testapp.glide.GlideActivity;
+import com.example.ma.testapp.mvvm.view.ui.MVVMActivity;
 
 import java.util.List;
 
@@ -40,7 +42,7 @@ import butterknife.OnClick;
  * Created by shumengma on 2018/6/21.
  */
 
-public class MainActivity extends FragmentActivity implements View.OnClickListener {
+public class MainActivity extends FragmentActivity implements View.OnClickListener, SeekBar.OnSeekBarChangeListener {
     private Button showDialog;
     private TextView tvTest;
     private ImageView imgTest;
@@ -50,6 +52,10 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
     private Button toNestedScrollView, showActivityDialog, navigationView, chipView, glide,stick_top_view,webView,butterKnife;
     @BindView(R.id.btn_to_okhttp)
     Button toOkHttp;
+    @BindView(R.id.seekbar)
+    SeekBar seekBar;
+    @BindView(R.id.btn_to_vs)
+    Button toVS;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -127,6 +133,13 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
 
 //        parseJsonArray();
         parseJson();
+        int max = seekBar.getMax();
+        seekBar.setOnSeekBarChangeListener(this);
+        Log.d("----", "onCreate: ");
+
+        MarkerType type = MarkerType.COLLECTION;
+        Log.e("------", "onCreate: "+MarkerType.COLLECTION.equals(type));
+        Log.e("------", "onCreate: "+MarkerType.DETAIL.equals(type));
     }
 
 
@@ -202,6 +215,36 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
         startActivity(new Intent(MainActivity.this, EventBusActivity.class));
     }
 
+    @OnClick(R.id.btn_to_mvvm)
+    void goToMVVM(){
+        startActivity(new Intent(MainActivity.this, MVVMActivity.class));
+    }
+    @OnClick(R.id.btn_to_vs)
+    void goToVS(){startActivity(new Intent(MainActivity.this, ViewStubActivity.class));}
+    @OnClick(R.id.btn_to_animation)
+    void gotoAnimation(){
+        startActivity(new Intent(MainActivity.this, TranslateAnimationActivity.class));
+    }
+    @Override
+    public void onProgressChanged(SeekBar seekBar, int pro, boolean b) {
+        for (int i = 0; i <= pro; i++) {
+            Log.e("----", "onProgressChanged: i"+i);
+        }
+        for (int j = pro+1; j <= seekBar.getMax(); j++) {
+            Log.e("----", "onProgressChanged: j"+j);
+        }
+    }
+
+    @Override
+    public void onStartTrackingTouch(SeekBar seekBar) {
+
+    }
+
+    @Override
+    public void onStopTrackingTouch(SeekBar seekBar) {
+
+    }
+
     /**
      * 使TextView中不同大小字体垂直居中
      */
@@ -249,6 +292,13 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
         HotCity hotCity = JSON.toJavaObject(jsonObject, HotCity.class);
 
         Log.e("TAG", "parseJsonArray: ");
+    }
+    enum MarkerType {
+        NORMAL,             //一般样式
+        NORMAL_SELECTED,    //一般样式选中
+        NORMAL_PRE,         //一般样式已读
+        DETAIL,             //详细
+        COLLECTION          //已收藏
     }
 
 }

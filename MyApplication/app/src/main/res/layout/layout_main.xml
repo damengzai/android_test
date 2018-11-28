@@ -54,7 +54,13 @@
                 android:layout_weight="1"
                 android:text="" />
         </LinearLayout>
-
+        <SeekBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="4"
+            android:progress="2"
+            android:id="@+id/seekbar"
+            />
         <Button
             android:id="@+id/show_activity_dialog"
             android:layout_width="wrap_content"
@@ -118,6 +124,21 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="EventBus"/>
+        <Button
+            android:id="@+id/btn_to_mvvm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MVVM"/>
+        <Button
+            android:id="@+id/btn_to_vs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ViewStub\CustomRadioGroup"/>
+        <Button
+            android:id="@+id/btn_to_animation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="animation"/>
 
     </LinearLayout>
 </ScrollView>

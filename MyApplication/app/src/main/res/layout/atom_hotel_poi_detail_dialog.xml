@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="92dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/corner_drawable"
+        android:orientation="vertical"
+        android:paddingLeft="24dp"
+        android:paddingTop="20dp">
+
+        <TextView
+            android:id="@+id/atom_hotel_poi_detail_name"
+            android:layout_width="match_parent"
+            android:layout_height="22dp"
+            android:text="name"
+            android:textColor="#212121"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/atom_hotel_poi_detail_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="address"
+            android:textColor="#212121"
+            android:textSize="12dp" />
+    </LinearLayout>
+</RelativeLayout>
