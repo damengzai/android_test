@@ -18,7 +18,6 @@ public class MVVMActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mvvm_layout);
-        ButterKnife.bind(this);
         if (savedInstanceState == null){
             ProjectListFragment fragment = new ProjectListFragment();
             getSupportFragmentManager().beginTransaction().add(R.id.fragment_container, fragment, ProjectListFragment.TAG).commit();
