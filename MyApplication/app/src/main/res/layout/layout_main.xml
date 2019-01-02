@@ -139,6 +139,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="animation"/>
+        <Button
+            android:id="@+id/btn_to_hs"
+            android:text="HorizontalScrollView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
 
     </LinearLayout>
 </ScrollView>

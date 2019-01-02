@@ -35,6 +35,7 @@
         <activity android:name=".mvvm.view.ui.MVVMActivity"></activity>
         <activity android:name=".ViewStubActivity"></activity>
         <activity android:name=".TranslateAnimationActivity"></activity>
+        <activity android:name=".HorizontalScrollviewActivity"></activity>
     </application>
 
 </manifest>

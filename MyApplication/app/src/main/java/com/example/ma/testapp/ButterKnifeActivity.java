@@ -70,7 +70,7 @@ public class ButterKnifeActivity extends AppCompatActivity {
 
     private void initData(){
         LinearLayoutManager lm = new LinearLayoutManager(this);
-        lm.setOrientation(LinearLayoutManager.VERTICAL);
+        lm.setOrientation(LinearLayoutManager.HORIZONTAL);
         rv.setLayoutManager(lm);
         rv.setAdapter(new RVAdapter());
     }
@@ -79,22 +79,22 @@ public class ButterKnifeActivity extends AppCompatActivity {
         @NonNull
         @Override
         public MyHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-            MyHolder holder = new MyHolder(LayoutInflater.from(ButterKnifeActivity.this).inflate(R.layout.rv_item, null, false));
+            MyHolder holder = new MyHolder(LayoutInflater.from(ButterKnifeActivity.this).inflate(R.layout.atom_hotel_destination_play_item, null, false));
             return holder;
         }
 
         @Override
         public void onBindViewHolder(@NonNull MyHolder myHolder, int i) {
-            myHolder.tv.setText(i+"----");
+            myHolder.tv.setText(i+"--------------------------------------=======================================");
         }
 
         @Override
         public int getItemCount() {
-            return 4;
+            return 40;
         }
 
         class MyHolder extends RecyclerView.ViewHolder{
-            @BindView(R.id.rv_tv)
+            @BindView(R.id.atom_hotel_destination_play_item_desc)
             TextView tv;
             public MyHolder(@NonNull View itemView) {
                 super(itemView);

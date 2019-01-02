@@ -31,6 +31,7 @@ import com.alibaba.fastjson.JSONObject;
 import com.example.ma.testapp.chipview.ChipViewActivity;
 import com.example.ma.testapp.glide.GlideActivity;
 import com.example.ma.testapp.mvvm.view.ui.MVVMActivity;
+import com.example.ma.testapp.util.AES;
 
 import java.util.List;
 
@@ -94,19 +95,20 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
 //        Log.d("------", "onCreate: "+ Color.parseColor("#FFFF5555"));
         tvTest.setText(Html.fromHtml("<font color=\"#FF6E6E\" size=\"40\">降</font> 浏览，收藏"));
 
-        String jiangFavCollStr = mContext.getResources().getString(R.string.fav);
-        SpannableString spannableString = new SpannableString(jiangFavCollStr);
-        spannableString.setSpan(new AbsoluteSizeSpan(19, true), 0, 1, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-        spannableString.setSpan(new CustomVerticalCenterSpan(), 1, spannableString.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-        spannableString.setSpan(new ForegroundColorSpan(mContext.getResources().getColor(R.color.test_c)), 0, 1, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-        spannableString.setSpan(new AlignmentSpan() {
-            @Override
-            public Layout.Alignment getAlignment() {
-                return Layout.Alignment.ALIGN_CENTER;
-            }
-        }, 0, spannableString.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-        fav.setText(spannableString);
-//        order.setText("&#xf459; 我的订单");
+//        String jiangFavCollStr = mContext.getResources().getString(R.string.fav);
+//        SpannableString spannableString = new SpannableString(jiangFavCollStr);
+//        spannableString.setSpan(new AbsoluteSizeSpan(19, true), 0, 1, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+//        spannableString.setSpan(new CustomVerticalCenterSpan(), 1, spannableString.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+//        spannableString.setSpan(new ForegroundColorSpan(mContext.getResources().getColor(R.color.test_c)), 0, 1, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+//        spannableString.setSpan(new AlignmentSpan() {
+//            @Override
+//            public Layout.Alignment getAlignment() {
+//                return Layout.Alignment.ALIGN_CENTER;
+//            }
+//        }, 0, spannableString.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+//        fav.setText(spannableString);
+        order.setText("&#xf459; 我的订单");
+        order.setText(String.format(getResources().getString(R.string.order_des), "我的订单"));
 //        fav.setText("&#xe415; 浏览&amp;收藏");
 
         String jsName = "bundle://Hotel/HDetailMapHotel.png";
@@ -140,6 +142,10 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
         MarkerType type = MarkerType.COLLECTION;
         Log.e("------", "onCreate: "+MarkerType.COLLECTION.equals(type));
         Log.e("------", "onCreate: "+MarkerType.DETAIL.equals(type));
+
+
+        String encryptedString = AES.Encrypt("Lorem ipsum dolor sit amet, consectetur adipiscing elit ........","0102030405060708");
+        Log.e("------", "onCreate: "+encryptedString);
     }
 
 
@@ -224,6 +230,10 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
     @OnClick(R.id.btn_to_animation)
     void gotoAnimation(){
         startActivity(new Intent(MainActivity.this, TranslateAnimationActivity.class));
+    }
+    @OnClick(R.id.btn_to_hs)
+    void gotoHorizontalScrollview(){
+        startActivity(new Intent(MainActivity.this, HorizontalScrollviewActivity.class));
     }
     @Override
     public void onProgressChanged(SeekBar seekBar, int pro, boolean b) {
